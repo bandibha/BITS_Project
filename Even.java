@@ -1,16 +1,13 @@
-import java.util.*;
-public class Even {
-    public static void main(String[] args) {
+import java.util.Scanner;
+public class Even{
+    public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        for(int i=0;i<n;i++){
-            int t = sc.nextInt();
-            if((t&1)==0){
-                System.out.println("Even");
 
-            }else{
-                System.out.println("Odd");
-            }
+        if(n %2 == 0 ){
+            System.out.println("Even");
+        }else{
+           System.out.println("odd"); 
         }
     }
 }

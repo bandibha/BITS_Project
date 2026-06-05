@@ -1,24 +1,40 @@
-import java.util.*;
+import java.util.Scanner;
+public class Marks{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int s1,s2,s3,s4,s5;
+        String grade;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-public class Marks {
-    public static void main(String[] args) {
-        Scanner sc  = new Scanner(System.in);
-        System.out.println("Enter the no.of Students:");
-        int n = sc.nextInt();
-       
-        for(int i=0;i<n;i++){
-            ArrayList<Integer> arr = new ArrayList<>();
-            for(int j=0;j<5;j++){
-                System.out.println("Enter the Subject Marks:");
-                int submarks = sc.nextInt();
-                arr.add(submarks);
-            }int sum=0;
-            for (int c : arr) {
-             sum+=c;   
-            }
-            double avg = (double)sum/5;
-            System.out.println(i+1 + " .Student Average is :"+avg);
+        s1=sc.nextInt();
+        s2=sc.nextInt();
+        s3=sc.nextInt();
+        s4=sc.nextInt();
+        s5=sc.nextInt();
+
+        int total=s1+s2+s3+s4+s5;
+        double percentage=(total/500.0)*100;
+        System.out.println("Total:"+total);
+        System.out.println("Percentage:"+percentage);
+
+        switch ((int) percentage/10){
+            case 10:
+                grade = "O";
+                break;
+            case 9:
+                grade = "A";
+                break;
+            case 8:
+                grade = "B";
+                break;
+            case 7:
+                grade = "C";
+                break;
+            case 6:
+                grade = "D";
+                break;
+            default:
+                grade = "F";
         }
+        System.out.println("Grade:"+grade);
     }
 }
